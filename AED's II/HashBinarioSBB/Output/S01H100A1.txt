@@ -1,0 +1,149 @@
+0:
+(100400) Augusto Castello Branco
+1:
+(201901) Marcelo Felix de
+(269601) Arthur Brandao Raposo
+(321301) Lucas Antonio Reis
+4:
+(157004) Arthur Cruz Camilo
+(327404) Gabriela Chaltein de
+(472404) Caio de Oliveira
+(511904) Felipe El Sayegh
+5:
+(164505) Afonso Cesar Machado
+(181005) Lucas Duarte Melo
+(341005) Vance Antunes Silveira
+9:
+(430809) Zamis de Souza
+13:
+(471613) Larissa Fernanda dos
+15:
+(142415) Antonio Airton Cabral
+(343715) Guilherme Augusto da
+(510015) Paulo Augusto Ferreira
+18:
+(528618) Luca Bustamante Corradi
+21:
+(406221) Caique Costa Perona
+22:
+(343822) Henrique Batista Barbosa
+23:
+(259023) Daniel Carvalho Lott
+26:
+(395826) Eric Drumond Rocha
+27:
+(384827) Gustavo Cabral Drumond
+28:
+(497328) Clara Braz Iplinsky
+29:
+(157229) Tomas Barroso Fernandes
+(492029) Rebeca de Souza
+32:
+(162832) Vinicius Berquo Mauricio
+(439032) Luiz Carlos Real
+33:
+(195833) Sonangnon Damienne Dossa
+(477033) Jose Carlos de
+34:
+(369234) Artur Duarte Penna
+(437334) Lorenzo Fenyves Ferreira
+35:
+(259935) Guilherme Alvarenga Torres
+(369635) Karina Azevedo Barbosa
+(418935) Tiago Felipe Miranda
+36:
+(422236) Caio Diego Souza
+38:
+(142438) Gabriela Cristina Cal
+(523538) Gabriel de Person
+39:
+(167339) Caroline Coimbra Cardoso
+40:
+(178440) Felipe Fernandes Coelho
+41:
+(333341) Davi de Lima
+(527341) Nathalia de Souza
+42:
+(107542) Thomas Esteves
+47:
+(551047) Savio Evaristo de
+48:
+(287748) Gustavo Barros Campos
+49:
+(114849) Caio Figueiredo dos
+(394349) Victor Colussi Machado
+(554849) Geraldo Augusto Silva
+51:
+(224451) Vitor Akira Alkmim
+(465751) Mateus Cadar de
+52:
+(509252) Victor Andres Caram
+53:
+(248853) Luis Felipe Veloso
+55:
+(227155) Stefano de Oliveira
+57:
+(257057) Lucas Fonseca Mundim
+(390157) Jose Flavio Dias
+(396757) Emylle Alves Leitao
+59:
+(451559) Gustavo Andrade Cunha
+61:
+(434061) Andressa Amaral Cunha
+64:
+(495164) Leonardo Dell'Isola de
+66:
+(103666) Guilherme Dutra Silva
+(467866) Lucas de Vasconcelos
+72:
+(345072) Arthur Alves Melo
+(479772) Rafael Bruno Siqueira
+73:
+(405473) Luis Fernando Freire
+74:
+(348474) Daniel Couto Fonseca
+(396174) Virginia Almeida Satyro
+76:
+(319976) Yuri de Albuquerque
+77:
+(160277) Bruno da Silva
+(364177) Guilherme Cramer Barbosa
+78:
+(466078) Gustavo Brum Soares
+79:
+(200879) Felipe Cerqueira Lyra
+(336279) Samuel Christian de
+81:
+(284081) Victor Castro Martins
+82:
+(170982) Alice Diniz Ferreira
+(210682) Victor Campolina Franca
+83:
+(144583) Francisco Eli Rodrigues
+84:
+(436184) Polyanna de Carvalho
+(497484) Christian David Costa
+86:
+(332086) Vanessa Carla dos
+(343086) Gustavo Birchal Zicker
+87:
+(306387) Isabela da Costa
+88:
+(209088) Bernardo Bastos Pereira
+89:
+(150589) Ingrid Elisabeth Spangler
+(536189) Maxmilliam de Souza
+90:
+(238290) Heitor Carvalho Loureiro
+92:
+(504292) Paulo Felipe Filardi
+93:
+(377993) Vinicius Bastos Rettore
+94:
+(122994) Henrique Assis Cordeiro
+95:
+(271695) Leticia Astoni Jalles
+96:
+(319296) Marco Aurelio Miranda
+98:
+(403298) Tarcisio de Oliveira

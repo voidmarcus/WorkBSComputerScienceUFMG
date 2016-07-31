@@ -1,0 +1,131 @@
+0:
+(100400) Augusto Castello Branco
+1:
+(201901) Marcelo Felix de
+(224451) Vitor Akira Alkmim
+(269601) Arthur Brandao Raposo
+(321301) Lucas Antonio Reis
+(465751) Mateus Cadar de
+2:
+(509252) Victor Andres Caram
+3:
+(248853) Luis Felipe Veloso
+4:
+(157004) Arthur Cruz Camilo
+(327404) Gabriela Chaltein de
+(472404) Caio de Oliveira
+(511904) Felipe El Sayegh
+5:
+(164505) Afonso Cesar Machado
+(181005) Lucas Duarte Melo
+(227155) Stefano de Oliveira
+(341005) Vance Antunes Silveira
+7:
+(257057) Lucas Fonseca Mundim
+(390157) Jose Flavio Dias
+(396757) Emylle Alves Leitao
+9:
+(430809) Zamis de Souza
+(451559) Gustavo Andrade Cunha
+11:
+(434061) Andressa Amaral Cunha
+13:
+(471613) Larissa Fernanda dos
+14:
+(495164) Leonardo Dell'Isola de
+15:
+(142415) Antonio Airton Cabral
+(343715) Guilherme Augusto da
+(510015) Paulo Augusto Ferreira
+16:
+(103666) Guilherme Dutra Silva
+(467866) Lucas de Vasconcelos
+18:
+(528618) Luca Bustamante Corradi
+21:
+(406221) Caique Costa Perona
+22:
+(343822) Henrique Batista Barbosa
+(345072) Arthur Alves Melo
+(479772) Rafael Bruno Siqueira
+23:
+(259023) Daniel Carvalho Lott
+(405473) Luis Fernando Freire
+24:
+(348474) Daniel Couto Fonseca
+(396174) Virginia Almeida Satyro
+26:
+(319976) Yuri de Albuquerque
+(395826) Eric Drumond Rocha
+27:
+(160277) Bruno da Silva
+(364177) Guilherme Cramer Barbosa
+(384827) Gustavo Cabral Drumond
+28:
+(466078) Gustavo Brum Soares
+(497328) Clara Braz Iplinsky
+29:
+(157229) Tomas Barroso Fernandes
+(200879) Felipe Cerqueira Lyra
+(336279) Samuel Christian de
+(492029) Rebeca de Souza
+31:
+(284081) Victor Castro Martins
+32:
+(162832) Vinicius Berquo Mauricio
+(170982) Alice Diniz Ferreira
+(210682) Victor Campolina Franca
+(439032) Luiz Carlos Real
+33:
+(144583) Francisco Eli Rodrigues
+(195833) Sonangnon Damienne Dossa
+(477033) Jose Carlos de
+34:
+(369234) Artur Duarte Penna
+(436184) Polyanna de Carvalho
+(437334) Lorenzo Fenyves Ferreira
+(497484) Christian David Costa
+35:
+(259935) Guilherme Alvarenga Torres
+(369635) Karina Azevedo Barbosa
+(418935) Tiago Felipe Miranda
+36:
+(332086) Vanessa Carla dos
+(343086) Gustavo Birchal Zicker
+(422236) Caio Diego Souza
+37:
+(306387) Isabela da Costa
+38:
+(142438) Gabriela Cristina Cal
+(209088) Bernardo Bastos Pereira
+(523538) Gabriel de Person
+39:
+(150589) Ingrid Elisabeth Spangler
+(167339) Caroline Coimbra Cardoso
+(536189) Maxmilliam de Souza
+40:
+(178440) Felipe Fernandes Coelho
+(238290) Heitor Carvalho Loureiro
+41:
+(333341) Davi de Lima
+(527341) Nathalia de Souza
+42:
+(107542) Thomas Esteves
+(504292) Paulo Felipe Filardi
+43:
+(377993) Vinicius Bastos Rettore
+44:
+(122994) Henrique Assis Cordeiro
+45:
+(271695) Leticia Astoni Jalles
+46:
+(319296) Marco Aurelio Miranda
+47:
+(551047) Savio Evaristo de
+48:
+(287748) Gustavo Barros Campos
+(403298) Tarcisio de Oliveira
+49:
+(114849) Caio Figueiredo dos
+(394349) Victor Colussi Machado
+(554849) Geraldo Augusto Silva

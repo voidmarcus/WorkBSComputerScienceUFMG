@@ -1,0 +1,113 @@
+0:
+(164575) Pedro Henrique Martins
+(165025) Rafael Luiz Vieira
+(266750) Alayde Magaly Vieira
+(363775) Heraldo Henrique de
+(428800) Yuri Garcia Vilela
+1:
+(267751) Cleyton Nicel de
+(272301) Gabriela Nathacha da
+(387576) Alberto Martins Resende
+(452901) Matheus Henrique Braga
+2:
+(332027) Victor Negri Andrade
+(411452) Joao Moreno Rodrigues
+(493927) Frederique-michele Nno Ella
+3:
+(507878) Caio Lenoir Passos
+4:
+(122254) Gustavo Lelis Vergara
+(265179) Thiago Henriques Santos
+(353329) Humberto Luiz Harry
+(361604) Joao Marcos Zanforlin
+(416029) Wagner Menezes Polycarpo
+(512929) Bruna Moura Lamounier
+(531554) Aurea Halfeld Ferreira
+5:
+(399805) Patrick Goncalves Mendes
+7:
+(190007) Guilherme Henrique Magalhaes
+(205007) Joao Henrique Soares
+(489282) Nicolas Medeiros Achabal
+(492707) Bhryan Henderson Lopes
+8:
+(222883) Paula Jeniffer dos
+(239483) Matheus Henrique Araujo
+(379008) Glauber Jesus Loiola
+9:
+(168134) Allan Hericles Oliveira
+(216434) Gustavo Mateus Franco
+(225059) Samuel Marques Barbosa
+(277509) Richard Nikolas Chaves
+(487384) Guilherme Motta Gabriel
+10:
+(125335) Gabriel Henrique Peixoto
+(156610) Caio Henrique Antunes
+(292085) Natan Goncalves Pedersolli
+(492810) Breno Lucas Silva
+11:
+(102711) Filipe Maciel Pontes
+(358961) Izabela Leal Minchilo
+(421636) Luis Henrique Lindgren
+(481236) Igor Galvao Carvalho
+(501036) Bruna Miranda Lafeta
+12:
+(229762) Ana Luisa Diniz
+(241287) Vitor Lopes Camargos
+(243387) Ana Luisa Lima
+(269387) Marcel Henrique da
+(348862) Cristiano Lopes Hoehne
+(436337) Arthur Gomes Faria
+(464262) Lucas Lima Castro
+(466612) Mariana Gonzaga Ribeiro
+(482037) Brenda Goncalves Pereira
+(501412) Edsoney Moreira Soares
+13:
+(316613) Francelle Maria Oliveira
+(413588) Gustavo Henrique Oliveira
+14:
+(366814) Frederico Machado Teixeira
+(495614) Douglas Lima de
+(495989) Felipe Jaworoski de
+15:
+(322615) Junio Leonardo Soares
+16:
+(224516) Pedro Nascimento Costa
+(302166) Daniel Guimaraes Sousa
+(321441) Patrick Garcia Vilela
+(428641) Matheus Henrique de
+(523666) Josue Henrique de
+17:
+(235167) Rodrigo Lima de
+(263292) Filipe Laureano Raso
+(281892) Andre Lustosa Cabral
+(453017) Paulo Henrique Silva
+(465567) Thiago Morais Araujo
+(481792) Matheus Grieder Cougias
+(534442) Cleber Moreira Rebuitti
+18:
+(192718) Arthur Gomes Paiva
+(282193) Guilherme Magalhaes Costa
+19:
+(293194) Joao Guilherme Santana
+(346769) Carolina Gomes Rodriguez
+(415119) Daniel Ishitani Melo
+(507419) Nayara Kely Miranda
+(510394) Gabriel Mudadu Carmona
+20:
+(129020) Joao Marcelo Soares
+(254445) Brenner Henrique Fagundes
+(430920) Guilherme Lourenco de
+(470145) Raphael Heringer Rangel
+21:
+(122096) Daniel Nepomuceno Coutinho
+(232896) Andre Gomes Heringer
+(541771) Felipe Magalhaes Fonseca
+23:
+(102848) Lucas Fonseca Pereira
+(265348) Filipe Moreira Mateus
+(552273) Lincoln Mateus Konig
+24:
+(337849) Carlos Henrique de
+(359374) Gabriel Lacerda Lucas
+(543224) Mario Lucio Amaral

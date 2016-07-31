@@ -1,0 +1,9 @@
+Nomes dos Arquivos seguem o seguinte padrão:
+
+SxxHyyAzz
+Sxx --> Saída referente ao arquivo "alunosxx.txt"
+Hyy --> Hash tamanho yy
+Azz --> Árvore 0 ou 1
+
+Exemplo: 
+S01H25A0 --> Saída referente ao arquivo "alunos01.txt", Hash de tamanho 25, Árvore escolhida 0
