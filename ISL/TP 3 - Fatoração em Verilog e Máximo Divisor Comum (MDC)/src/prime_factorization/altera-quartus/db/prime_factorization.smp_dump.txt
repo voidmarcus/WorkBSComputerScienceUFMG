@@ -1,0 +1,5 @@
+
+State Machine - |fatorador_top|fatorador_engine:fatorador_engine_00|state_reg
+Name state_reg.wait_op 
+state_reg.idle 0 
+state_reg.wait_op 1 

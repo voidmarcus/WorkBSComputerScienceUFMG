@@ -1,0 +1,109 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -43.766
+TNS   : -1105.899
+
+Type  : Slow Model Setup 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -9.763
+TNS   : -155.292
+
+Type  : Slow Model Setup 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -9.500
+TNS   : -148.498
+
+Type  : Slow Model Hold 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -12.786
+TNS   : -662.355
+
+Type  : Slow Model Hold 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -7.000
+TNS   : -322.710
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : 0.015
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -3.570
+TNS   : -39.487
+
+Type  : Slow Model Recovery 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -3.307
+TNS   : -32.943
+
+Type  : Slow Model Removal 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -4.973
+TNS   : -251.557
+
+Type  : Slow Model Removal 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -4.710
+TNS   : -217.432
+
+Type  : Slow Model Minimum Pulse Width 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -2.766
+TNS   : -422.582
+
+Type  : Slow Model Minimum Pulse Width 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -2.483
+TNS   : -670.812
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -67.380
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -18.484
+TNS   : -451.835
+
+Type  : Fast Model Setup 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -4.399
+TNS   : -67.815
+
+Type  : Fast Model Setup 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -4.282
+TNS   : -65.027
+
+Type  : Fast Model Hold 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -6.623
+TNS   : -334.551
+
+Type  : Fast Model Hold 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -3.567
+TNS   : -163.914
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -0.323
+TNS   : -0.472
+
+Type  : Fast Model Recovery 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -1.685
+TNS   : -18.644
+
+Type  : Fast Model Recovery 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -1.568
+TNS   : -15.274
+
+Type  : Fast Model Removal 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -2.301
+TNS   : -109.802
+
+Type  : Fast Model Removal 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -2.184
+TNS   : -88.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -67.380
+
+Type  : Fast Model Minimum Pulse Width 'fatorador_engine:fatorador_engine_00|i_reg[10]'
+Slack : -1.013
+TNS   : -129.328
+
+Type  : Fast Model Minimum Pulse Width 'fatorador_engine:fatorador_engine_00|i_mod[0]'
+Slack : -0.913
+TNS   : -219.546
+
+------------------------------------------------------------

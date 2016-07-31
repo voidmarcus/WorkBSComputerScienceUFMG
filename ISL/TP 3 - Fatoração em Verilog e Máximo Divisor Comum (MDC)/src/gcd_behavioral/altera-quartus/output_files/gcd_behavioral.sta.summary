@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -2.855
+TNS   : -64.811
+
+Type  : Slow Model Setup 'gcd_engine:gcd_engine_01|a_reg[0]'
+Slack : 0.577
+TNS   : 0.000
+
+Type  : Slow Model Hold 'gcd_engine:gcd_engine_01|a_reg[0]'
+Slack : -3.659
+TNS   : -7.660
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -1.515
+TNS   : -2.086
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -35.380
+
+Type  : Slow Model Minimum Pulse Width 'gcd_engine:gcd_engine_01|a_reg[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -0.807
+TNS   : -13.717
+
+Type  : Fast Model Setup 'gcd_engine:gcd_engine_01|a_reg[0]'
+Slack : 0.602
+TNS   : 0.000
+
+Type  : Fast Model Hold 'gcd_engine:gcd_engine_01|a_reg[0]'
+Slack : -1.926
+TNS   : -2.286
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -0.882
+TNS   : -2.959
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -35.380
+
+Type  : Fast Model Minimum Pulse Width 'gcd_engine:gcd_engine_01|a_reg[0]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,5 @@
+
+State Machine - |gcd_top|gcd_engine:gcd_engine_01|state_reg
+Name state_reg.op 
+state_reg.idle 0 
+state_reg.op 1 

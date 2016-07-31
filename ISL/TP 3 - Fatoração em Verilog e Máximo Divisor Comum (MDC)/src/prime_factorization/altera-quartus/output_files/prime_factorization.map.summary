@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jun 22 14:54:45 2016
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Revision Name : prime_factorization
+Top-level Entity Name : fatorador_top
+Family : Cyclone II
+Total logic elements : 976
+    Total combinational functions : 976
+    Dedicated logic registers : 66
+Total registers : 66
+Total pins : 73
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

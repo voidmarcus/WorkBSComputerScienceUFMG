@@ -1,0 +1,849 @@
+Analysis & Synthesis report for prime_factorization
+Wed Jun 22 14:54:45 2016
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |fatorador_top|fatorador_engine:fatorador_engine_00|state_reg
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: fatorador_engine:fatorador_engine_00|lpm_divide:Div0
+ 14. Parameter Settings for Inferred Entity Instance: fatorador_engine:fatorador_engine_00|lpm_divide:Mod0
+ 15. Port Connectivity Checks: "bin_to_bcd:bin_to_bcd_04"
+ 16. Port Connectivity Checks: "bin_to_bcd:bin_to_bcd_03"
+ 17. Port Connectivity Checks: "bin_to_bcd:bin_to_bcd_02"
+ 18. Port Connectivity Checks: "bin_to_bcd:bin_to_bcd_01"
+ 19. Port Connectivity Checks: "fatorador_engine:fatorador_engine_00"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jun 22 14:54:45 2016      ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                      ; prime_factorization                        ;
+; Top-level Entity Name              ; fatorador_top                              ;
+; Family                             ; Cyclone II                                 ;
+; Total logic elements               ; 976                                        ;
+;     Total combinational functions  ; 976                                        ;
+;     Dedicated logic registers      ; 66                                         ;
+; Total registers                    ; 66                                         ;
+; Total pins                         ; 73                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                         ;
++----------------------------------------------------------------------------+--------------------+---------------------+
+; Option                                                                     ; Setting            ; Default Value       ;
++----------------------------------------------------------------------------+--------------------+---------------------+
+; Device                                                                     ; EP2C35F672C6       ;                     ;
+; Top-level entity name                                                      ; fatorador_top      ; prime_factorization ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX       ;
+; Use smart compilation                                                      ; Off                ; Off                 ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                  ;
+; Enable compact report table                                                ; Off                ; Off                 ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto                ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                 ;
+; Preserve fewer node names                                                  ; On                 ; On                  ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                 ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001        ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993           ;
+; State Machine Processing                                                   ; Auto               ; Auto                ;
+; Safe State Machine                                                         ; Off                ; Off                 ;
+; Extract Verilog State Machines                                             ; On                 ; On                  ;
+; Extract VHDL State Machines                                                ; On                 ; On                  ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                 ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                  ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                  ;
+; Parallel Synthesis                                                         ; On                 ; On                  ;
+; DSP Block Balancing                                                        ; Auto               ; Auto                ;
+; NOT Gate Push-Back                                                         ; On                 ; On                  ;
+; Power-Up Don't Care                                                        ; On                 ; On                  ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                 ;
+; Remove Duplicate Registers                                                 ; On                 ; On                  ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                 ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                 ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                 ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                 ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                  ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                 ;
+; Optimization Technique                                                     ; Balanced           ; Balanced            ;
+; Carry Chain Length                                                         ; 70                 ; 70                  ;
+; Auto Carry Chains                                                          ; On                 ; On                  ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                  ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                 ;
+; Auto ROM Replacement                                                       ; On                 ; On                  ;
+; Auto RAM Replacement                                                       ; On                 ; On                  ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto                ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                  ;
+; Strict RAM Replacement                                                     ; Off                ; Off                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                  ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                 ;
+; Auto Resource Sharing                                                      ; Off                ; Off                 ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                 ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                 ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                 ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                  ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                 ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                 ;
+; Report Parameter Settings                                                  ; On                 ; On                  ;
+; Report Source Assignments                                                  ; On                 ; On                  ;
+; Report Connectivity Checks                                                 ; On                 ; On                  ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                 ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                   ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation  ;
+; HDL message level                                                          ; Level2             ; Level2              ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                 ;
+; Clock MUX Protection                                                       ; On                 ; On                  ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                 ;
+; Block Design Naming                                                        ; Auto               ; Auto                ;
+; SDC constraint protection                                                  ; Off                ; Off                 ;
+; Synthesis Effort                                                           ; Auto               ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                  ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium              ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                  ;
+; Synthesis Seed                                                             ; 1                  ; 1                   ;
++----------------------------------------------------------------------------+--------------------+---------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; ../fatorador_top.v               ; yes             ; User Verilog HDL File        ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/fatorador_top.v                           ;         ;
+; ../fatorador_engine.v            ; yes             ; User Verilog HDL File        ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/fatorador_engine.v                        ;         ;
+; ../bin_to_bcd.v                  ; yes             ; User Verilog HDL File        ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/bin_to_bcd.v                              ;         ;
+; ../hex_to_7seg.v                 ; yes             ; User Verilog HDL File        ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/hex_to_7seg.v                             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/chris/altera/13.0/quartus/libraries/megafunctions/lpm_divide.tdf                                        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/chris/altera/13.0/quartus/libraries/megafunctions/abs_divider.inc                                       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/chris/altera/13.0/quartus/libraries/megafunctions/sign_div_unsign.inc                                   ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; /home/chris/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                                        ;         ;
+; db/lpm_divide_3gm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/altera-quartus/db/lpm_divide_3gm.tdf      ;         ;
+; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/altera-quartus/db/sign_div_unsign_dnh.tdf ;         ;
+; db/alt_u_div_s5f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/altera-quartus/db/alt_u_div_s5f.tdf       ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/altera-quartus/db/add_sub_lkc.tdf         ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/altera-quartus/db/add_sub_mkc.tdf         ;         ;
+; db/lpm_divide_68m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/altera-quartus/db/lpm_divide_68m.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                          ;
++---------------------------------------------+--------------------------------------------------------+
+; Resource                                    ; Usage                                                  ;
++---------------------------------------------+--------------------------------------------------------+
+; Estimated Total logic elements              ; 976                                                    ;
+;                                             ;                                                        ;
+; Total combinational functions               ; 976                                                    ;
+; Logic element usage by number of LUT inputs ;                                                        ;
+;     -- 4 input functions                    ; 546                                                    ;
+;     -- 3 input functions                    ; 333                                                    ;
+;     -- <=2 input functions                  ; 97                                                     ;
+;                                             ;                                                        ;
+; Logic elements by mode                      ;                                                        ;
+;     -- normal mode                          ; 665                                                    ;
+;     -- arithmetic mode                      ; 311                                                    ;
+;                                             ;                                                        ;
+; Total registers                             ; 66                                                     ;
+;     -- Dedicated logic registers            ; 66                                                     ;
+;     -- I/O registers                        ; 0                                                      ;
+;                                             ;                                                        ;
+; I/O pins                                    ; 73                                                     ;
+; Embedded Multiplier 9-bit elements          ; 0                                                      ;
+; Maximum fan-out node                        ; fatorador_engine:fatorador_engine_00|state_reg.wait_op ;
+; Maximum fan-out                             ; 102                                                    ;
+; Total fan-out                               ; 3585                                                   ;
+; Average fan-out                             ; 3.22                                                   ;
++---------------------------------------------+--------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                              ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                       ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |fatorador_top                            ; 976 (44)          ; 66 (33)      ; 0           ; 0            ; 0       ; 0         ; 73   ; 0            ; |fatorador_top                                                                                                                                                            ;              ;
+;    |bin_to_bcd:bin_to_bcd_01|             ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|bin_to_bcd:bin_to_bcd_01                                                                                                                                   ;              ;
+;    |bin_to_bcd:bin_to_bcd_02|             ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|bin_to_bcd:bin_to_bcd_02                                                                                                                                   ;              ;
+;    |bin_to_bcd:bin_to_bcd_03|             ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|bin_to_bcd:bin_to_bcd_03                                                                                                                                   ;              ;
+;    |bin_to_bcd:bin_to_bcd_04|             ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|bin_to_bcd:bin_to_bcd_04                                                                                                                                   ;              ;
+;    |fatorador_engine:fatorador_engine_00| ; 780 (199)         ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00                                                                                                                       ;              ;
+;       |lpm_divide:Div0|                   ; 292 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Div0                                                                                                       ;              ;
+;          |lpm_divide_3gm:auto_generated|  ; 292 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Div0|lpm_divide_3gm:auto_generated                                                                         ;              ;
+;             |sign_div_unsign_dnh:divider| ; 292 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Div0|lpm_divide_3gm:auto_generated|sign_div_unsign_dnh:divider                                             ;              ;
+;                |alt_u_div_s5f:divider|    ; 292 (291)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Div0|lpm_divide_3gm:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_s5f:divider                       ;              ;
+;                   |add_sub_mkc:add_sub_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Div0|lpm_divide_3gm:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_s5f:divider|add_sub_mkc:add_sub_1 ;              ;
+;       |lpm_divide:Mod0|                   ; 289 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Mod0                                                                                                       ;              ;
+;          |lpm_divide_68m:auto_generated|  ; 289 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Mod0|lpm_divide_68m:auto_generated                                                                         ;              ;
+;             |sign_div_unsign_dnh:divider| ; 289 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Mod0|lpm_divide_68m:auto_generated|sign_div_unsign_dnh:divider                                             ;              ;
+;                |alt_u_div_s5f:divider|    ; 289 (289)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Mod0|lpm_divide_68m:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_s5f:divider                       ;              ;
+;    |hex_to_7seg:hex_to_7seg_00|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|hex_to_7seg:hex_to_7seg_00                                                                                                                                 ;              ;
+;    |hex_to_7seg:hex_to_7seg_01|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|hex_to_7seg:hex_to_7seg_01                                                                                                                                 ;              ;
+;    |hex_to_7seg:hex_to_7seg_02|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|hex_to_7seg:hex_to_7seg_02                                                                                                                                 ;              ;
+;    |hex_to_7seg:hex_to_7seg_03|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|hex_to_7seg:hex_to_7seg_03                                                                                                                                 ;              ;
+;    |hex_to_7seg:hex_to_7seg_04|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|hex_to_7seg:hex_to_7seg_04                                                                                                                                 ;              ;
+;    |hex_to_7seg:hex_to_7seg_05|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|hex_to_7seg:hex_to_7seg_05                                                                                                                                 ;              ;
+;    |hex_to_7seg:hex_to_7seg_06|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|hex_to_7seg:hex_to_7seg_06                                                                                                                                 ;              ;
+;    |hex_to_7seg:hex_to_7seg_07|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fatorador_top|hex_to_7seg:hex_to_7seg_07                                                                                                                                 ;              ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |fatorador_top|fatorador_engine:fatorador_engine_00|state_reg ;
++-------------------+-----------------------------------------------------------+
+; Name              ; state_reg.wait_op                                         ;
++-------------------+-----------------------------------------------------------+
+; state_reg.idle    ; 0                                                         ;
+; state_reg.wait_op ; 1                                                         ;
++-------------------+-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                       ;
++---------------------------------------------------------+--------------------------------------------------------+------------------------+
+; Latch Name                                              ; Latch Enable Signal                                    ; Free of Timing Hazards ;
++---------------------------------------------------------+--------------------------------------------------------+------------------------+
+; fatorador_engine:fatorador_engine_00|out0[0]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out0[1]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out0[2]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out0[3]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out0[4]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out0[5]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out0[7]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out0[6]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out1[0]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out1[1]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out1[2]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out1[3]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out1[4]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out1[5]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out1[7]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out1[6]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out2[0]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out2[1]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out2[2]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out2[3]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out2[4]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out2[5]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out2[7]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out2[6]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out3[0]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out3[1]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out3[2]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out3[3]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out3[4]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out3[5]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out3[7]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|out3[6]            ; fatorador_engine:fatorador_engine_00|out0[15]          ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][0]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][1]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][2]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][3]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][4]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][5]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][7]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][6]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][0]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][1]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][2]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][3]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][4]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][5]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][7]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][6]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][0]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][1]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][2]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][3]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][4]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][5]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][7]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][6]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][0]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][1]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][2]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][3]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][4]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][5]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][7]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][6]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[0]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|idx[0]             ; fatorador_engine:fatorador_engine_00|idx[0]            ; yes                    ;
+; fatorador_engine:fatorador_engine_00|idx[1]             ; fatorador_engine:fatorador_engine_00|idx[0]            ; yes                    ;
+; fatorador_engine:fatorador_engine_00|idx[2]             ; fatorador_engine:fatorador_engine_00|idx[0]            ; yes                    ;
+; fatorador_engine:fatorador_engine_00|idx[3]             ; fatorador_engine:fatorador_engine_00|idx[0]            ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[1]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[2]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[3]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[4]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[5]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[6]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[7]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[8]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[9]               ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[10]              ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[11]              ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[12]              ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[13]              ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[14]              ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|i[15]              ; fatorador_engine:fatorador_engine_00|i[0]              ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][8]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][8]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][8]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][8]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][9]  ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][9]  ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][9]  ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][9]  ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][10] ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][10] ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][10] ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][10] ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[1][11] ; fatorador_engine:fatorador_engine_00|primes_buff[1][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[3][11] ; fatorador_engine:fatorador_engine_00|primes_buff[3][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[2][11] ; fatorador_engine:fatorador_engine_00|primes_buff[2][0] ; yes                    ;
+; fatorador_engine:fatorador_engine_00|primes_buff[0][11] ; fatorador_engine:fatorador_engine_00|primes_buff[0][0] ; yes                    ;
+; Number of user-specified and inferred latches = 116     ;                                                        ;                        ;
++---------------------------------------------------------+--------------------------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------+
+; Registers Removed During Synthesis                                    ;
++--------------------------------------------------+--------------------+
+; Register name                                    ; Reason for Removal ;
++--------------------------------------------------+--------------------+
+; fatorador_engine:fatorador_engine_00|state_reg~3 ; Lost fanout        ;
+; Total Number of Removed Registers = 1            ;                    ;
++--------------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 66    ;
+; Number of registers using Synchronous Clear  ; 16    ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |fatorador_top|fatorador_engine:fatorador_engine_00|i_reg[3] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |fatorador_top|fatorador_engine:fatorador_engine_00|Mux12    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: fatorador_engine:fatorador_engine_00|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                        ;
++------------------------+----------------+-------------------------------------------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                                                     ;
+; LPM_WIDTHD             ; 16             ; Untyped                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_3gm ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                              ;
++------------------------+----------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: fatorador_engine:fatorador_engine_00|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                        ;
++------------------------+----------------+-------------------------------------------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                                                     ;
+; LPM_WIDTHD             ; 16             ; Untyped                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_68m ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                              ;
++------------------------+----------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_to_bcd:bin_to_bcd_04"                                                                                                                                                          ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                           ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; binary ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_to_bcd:bin_to_bcd_03"                                                                                                                                                          ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                           ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; binary ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_to_bcd:bin_to_bcd_02"                                                                                                                                                          ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                           ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; binary ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin_to_bcd:bin_to_bcd_01"                                                                                                                                                          ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                           ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; binary ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++--------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fatorador_engine:fatorador_engine_00"                                                      ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; ready       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out0[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out1[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out2[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out3[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:12     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Wed Jun 22 14:54:29 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off prime_factorization -c prime_factorization
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/fatorador_top.v
+    Info (12023): Found entity 1: fatorador_top
+Info (12021): Found 2 design units, including 2 entities, in source file /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/fatorador_engine.v
+    Info (12023): Found entity 1: mod
+    Info (12023): Found entity 2: fatorador_engine
+Info (12021): Found 1 design units, including 1 entities, in source file /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/bin_to_bcd.v
+    Info (12023): Found entity 1: bin_to_bcd
+Info (12021): Found 1 design units, including 1 entities, in source file /home/chris/work/ufmg/isl/labs/lab03_2016-1/src/prime_factorization/hex_to_7seg.v
+    Info (12023): Found entity 1: hex_to_7seg
+Info (12127): Elaborating entity "fatorador_top" for the top level hierarchy
+Info (12128): Elaborating entity "fatorador_engine" for hierarchy "fatorador_engine:fatorador_engine_00"
+Warning (10230): Verilog HDL assignment warning at fatorador_engine.v(59): truncated value with size 32 to match size of target (4)
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(73): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(74): variable "idx" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(75): variable "idx" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(75): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(76): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(76): variable "idx" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(77): variable "idx" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at fatorador_engine.v(77): truncated value with size 32 to match size of target (4)
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(80): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(80): variable "idx" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(81): variable "idx" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at fatorador_engine.v(81): truncated value with size 32 to match size of target (4)
+Warning (10235): Verilog HDL Always Construct warning at fatorador_engine.v(84): variable "i" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at fatorador_engine.v(84): truncated value with size 32 to match size of target (16)
+Warning (10240): Verilog HDL Always Construct warning at fatorador_engine.v(50): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fatorador_engine.v(50): inferring latch(es) for variable "idx", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fatorador_engine.v(50): inferring latch(es) for variable "out0", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fatorador_engine.v(50): inferring latch(es) for variable "out1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fatorador_engine.v(50): inferring latch(es) for variable "out2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fatorador_engine.v(50): inferring latch(es) for variable "out3", which holds its previous value in one or more paths through the always construct
+Warning (10034): Output port "ready" at fatorador_engine.v(13) has no driver
+Info (10041): Inferred latch for "out3[0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[4]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[5]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[6]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[7]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[8]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[9]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[10]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[11]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[12]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[13]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[14]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out3[15]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[4]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[5]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[6]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[7]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[8]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[9]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[10]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[11]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[12]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[13]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[14]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out2[15]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[4]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[5]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[6]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[7]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[8]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[9]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[10]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[11]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[12]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[13]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[14]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out1[15]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[4]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[5]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[6]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[7]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[8]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[9]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[10]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[11]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[12]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[13]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[14]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "out0[15]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][4]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][5]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][6]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][7]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][8]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][9]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][10]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][11]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][12]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][13]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][14]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[0][15]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][4]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][5]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][6]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][7]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][8]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][9]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][10]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][11]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][12]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][13]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][14]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[1][15]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][4]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][5]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][6]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][7]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][8]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][9]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][10]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][11]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][12]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][13]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][14]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[2][15]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][4]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][5]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][6]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][7]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][8]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][9]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][10]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][11]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][12]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][13]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][14]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "primes_buff[3][15]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "idx[0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "idx[1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "idx[2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "idx[3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[0]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[1]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[2]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[3]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[4]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[5]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[6]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[7]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[8]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[9]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[10]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[11]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[12]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[13]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[14]" at fatorador_engine.v(50)
+Info (10041): Inferred latch for "i[15]" at fatorador_engine.v(50)
+Info (12128): Elaborating entity "bin_to_bcd" for hierarchy "bin_to_bcd:bin_to_bcd_01"
+Warning (10230): Verilog HDL assignment warning at bin_to_bcd.v(16): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at bin_to_bcd.v(14): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:hex_to_7seg_00"
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "fatorador_engine:fatorador_engine_00|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "fatorador_engine:fatorador_engine_00|Mod0"
+Info (12130): Elaborated megafunction instantiation "fatorador_engine:fatorador_engine_00|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "fatorador_engine:fatorador_engine_00|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
+    Info (12134): Parameter "LPM_WIDTHD" = "16"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3gm.tdf
+    Info (12023): Found entity 1: lpm_divide_3gm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dnh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_dnh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s5f.tdf
+    Info (12023): Found entity 1: alt_u_div_s5f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info (12023): Found entity 1: add_sub_lkc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info (12023): Found entity 1: add_sub_mkc
+Info (12130): Elaborated megafunction instantiation "fatorador_engine:fatorador_engine_00|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "fatorador_engine:fatorador_engine_00|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
+    Info (12134): Parameter "LPM_WIDTHD" = "16"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_68m.tdf
+    Info (12023): Found entity 1: lpm_divide_68m
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[0]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[1]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[2]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[3]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[4]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[5]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[7]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[6]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[0]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[1]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[2]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[3]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[4]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[5]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[7]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[6]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[0]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[1]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[2]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[3]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[4]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[5]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[7]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[6]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|idx[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|idx[1]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|idx[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|idx[2]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|idx[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|idx[3]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[8]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[8]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[8]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[9]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[9]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[9]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[10]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[10]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[10]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[11]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[11]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[11]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[12]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[12]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[12]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[13]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[13]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[13]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[14]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[14]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[14]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[1][15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[15]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[3][15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[15]
+Warning (13012): Latch fatorador_engine:fatorador_engine_00|primes_buff[2][15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fatorador_engine:fatorador_engine_00|i[15]
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1051 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 978 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 128 warnings
+    Info: Peak virtual memory: 641 megabytes
+    Info: Processing ended: Wed Jun 22 14:54:45 2016
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
+
+

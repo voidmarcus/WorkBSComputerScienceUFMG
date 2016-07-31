@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="prime_factorization">
+		<CBX_INST_ENTRY INSTANCE_NAME="|fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_3gm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fatorador_top|fatorador_engine:fatorador_engine_00|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_68m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
