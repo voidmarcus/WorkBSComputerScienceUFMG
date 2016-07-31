@@ -1,0 +1,13 @@
+v 4
+file "/home/chris/work/ufmg/isl/labs/lab02_2016-1/circuits/vhdl/sync_counter/" "../common/dec_bcd_to_7seg.vhd" "16137cc5017aa5b6ee78609192c03c8960044895" "20160529003721.378":
+  entity dec_bcd_to_7seg at 1( 0) + 0 on 17;
+  architecture rtl of dec_bcd_to_7seg at 12( 242) + 0 on 18;
+file "/home/chris/work/ufmg/isl/labs/lab02_2016-1/circuits/vhdl/sync_counter/" "./sync_counter_top.vhd" "2667d4ce7b3b475ec596768006396bdfa1766e4a" "20160529003721.291":
+  entity sync_counter_top at 1( 0) + 0 on 13;
+  architecture behavioral of sync_counter_top at 10( 150) + 0 on 14;
+file "/home/chris/work/ufmg/isl/labs/lab02_2016-1/circuits/vhdl/sync_counter/" "./sync_counter_tb.vhd" "a9c382e9b25e611891d1ed41d44992ff1b97c0ac" "20160529003721.252":
+  entity sync_counter_tb at 1( 0) + 0 on 11;
+  architecture sync_counter_behavioral of sync_counter_tb at 7( 99) + 0 on 12;
+file "/home/chris/work/ufmg/isl/labs/lab02_2016-1/circuits/vhdl/sync_counter/" "../common/flipflop_jk.vhd" "00f1653df3430a838266ac652857d1518d953167" "20160529003721.334":
+  entity flipflop_jk at 1( 0) + 0 on 15;
+  architecture rtl of flipflop_jk at 11( 172) + 0 on 16;
