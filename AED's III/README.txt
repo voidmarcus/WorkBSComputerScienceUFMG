@@ -1,1 +1,1 @@
-Trabalhos Práticos | Algoritmos e Estrutura de Dados III
+Trabalhos Práticos e Práticas em Algoritmo | Algoritmos e Estrutura de Dados III
