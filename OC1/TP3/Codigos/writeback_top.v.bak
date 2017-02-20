@@ -1,0 +1,35 @@
+`ifndef WRITEBACK_V
+  `define WRITEBACK_V
+
+  `include "utils.vh"
+
+  module writeback_top (
+      output wire [3:0] r_out,
+      input wire  [2:0] reg_addr1, reg_addr2, reg_addr3,
+      input wire  [3:0] data,
+      input wire  [2:0] oper, 
+      input wire sel, write_en, clk
+    );
+
+    wire [`CPU_WSIZE-1:0] write_data, read_data1, read_data2, wresult;
+    wire [`RSEL_WIDTH-1:0] wread_addr1, wread_addr2, wread_addr3;
+    wire [`ALU_OSIZE:0] wop;
+
+    registers#(`CPU_WSIZE, `RSEL_WIDTH) registers_wb(.read_data1(read_data1),     .read_data2(read_data2), 
+                                                     .write_data(write_data),     .read_address1(wread_addr1), 
+                                                     .read_address2(wread_addr2), .write_address(wread_addr3), 
+                                                     .write_en(write_en),         .clk(clk));
+
+    alu alu_wb(.r(wresult), .zero(zero), .ovf(ovf), .op(wop), .a(read_data1), .b(read_data2));
+
+    assign wread_addr1 = reg_addr1;
+    assign wread_addr2 = reg_addr2;
+    assign wread_addr3 = reg_addr3;
+    assign r_out = wresult;
+    assign wop = oper;
+    
+    assign write_data = sel == 0 ? data : wresult;
+
+  endmodule
+
+`endif // WRITEBACK_V

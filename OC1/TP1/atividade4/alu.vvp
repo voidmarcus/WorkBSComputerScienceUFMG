@@ -1,0 +1,419 @@
+#! /usr/bin/vvp
+:ivl_version "0.10.0 (devel)" "(s20141205)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 10;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x17b7f70 .scope module, "alu_tb" "alu_tb" 2 4;
+ .timescale -9 -10;
+v0x1800b00_0 .var "a", 7 0;
+v0x1800be0_0 .var "b", 7 0;
+v0x1800cb0_0 .var/i "i", 31 0;
+v0x1800d80_0 .var/i "j", 31 0;
+v0x1800e60_0 .var/i "k", 31 0;
+v0x1800f40_0 .var "op", 4 0;
+v0x1801000 .array "op_arr", 0 6, 4 0;
+v0x18010a0_0 .net "ovf", 0 0, L_0x1812ed0;  1 drivers
+v0x1801170_0 .net "r", 7 0, v0x18006c0_0;  1 drivers
+v0x18012d0_0 .net "zer", 0 0, L_0x18114d0;  1 drivers
+S_0x17be020 .scope module, "alu_dut" "alu" 2 99, 3 6 0, S_0x17b7f70;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 8 "r"
+    .port_info 1 /OUTPUT 1 "zero"
+    .port_info 2 /OUTPUT 1 "ovf"
+    .port_info 3 /INPUT 5 "op"
+    .port_info 4 /INPUT 8 "a"
+    .port_info 5 /INPUT 8 "b"
+L_0x1811700 .functor XNOR 1, L_0x18118b0, L_0x18119e0, C4<0>, C4<0>;
+L_0x1811cf0 .functor XOR 1, L_0x1811b10, L_0x1811c00, C4<0>, C4<0>;
+L_0x1811e00 .functor AND 1, L_0x1811700, L_0x1811cf0, C4<1>, C4<1>;
+L_0x18123d0 .functor XNOR 1, L_0x1812220, L_0x18122c0, C4<0>, C4<0>;
+L_0x1812360 .functor XOR 1, L_0x1812490, L_0x1812580, C4<0>, C4<0>;
+L_0x1812740 .functor AND 1, L_0x18123d0, L_0x1812360, C4<1>, C4<1>;
+v0x17a5760_0 .net *"_s0", 8 0, L_0x18013a0;  1 drivers
+v0x17fe530_0 .net *"_s13", 0 0, L_0x18118b0;  1 drivers
+v0x17fe610_0 .net *"_s15", 0 0, L_0x18119e0;  1 drivers
+v0x17fe700_0 .net *"_s16", 0 0, L_0x1811700;  1 drivers
+v0x17fe7c0_0 .net *"_s19", 0 0, L_0x1811b10;  1 drivers
+v0x17fe8f0_0 .net *"_s21", 0 0, L_0x1811c00;  1 drivers
+v0x17fe9d0_0 .net *"_s22", 0 0, L_0x1811cf0;  1 drivers
+v0x17fea90_0 .net *"_s24", 0 0, L_0x1811e00;  1 drivers
+L_0x2ad24cfaa0a8 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v0x17feb50_0 .net/2s *"_s26", 1 0, L_0x2ad24cfaa0a8;  1 drivers
+L_0x2ad24cfaa0f0 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x17fecc0_0 .net/2s *"_s28", 1 0, L_0x2ad24cfaa0f0;  1 drivers
+L_0x2ad24cfaa018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x17feda0_0 .net *"_s3", 0 0, L_0x2ad24cfaa018;  1 drivers
+v0x17fee80_0 .net *"_s30", 1 0, L_0x1811f10;  1 drivers
+v0x17fef60_0 .net *"_s35", 0 0, L_0x1812220;  1 drivers
+v0x17ff040_0 .net *"_s37", 0 0, L_0x18122c0;  1 drivers
+v0x17ff120_0 .net *"_s38", 0 0, L_0x18123d0;  1 drivers
+L_0x2ad24cfaa060 .functor BUFT 1, C4<000000000>, C4<0>, C4<0>, C4<0>;
+v0x17ff1e0_0 .net/2u *"_s4", 8 0, L_0x2ad24cfaa060;  1 drivers
+v0x17ff2c0_0 .net *"_s41", 0 0, L_0x1812490;  1 drivers
+v0x17ff470_0 .net *"_s43", 0 0, L_0x1812580;  1 drivers
+v0x17ff510_0 .net *"_s44", 0 0, L_0x1812360;  1 drivers
+v0x17ff5d0_0 .net *"_s46", 0 0, L_0x1812740;  1 drivers
+L_0x2ad24cfaa138 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v0x17ff690_0 .net/2s *"_s48", 1 0, L_0x2ad24cfaa138;  1 drivers
+L_0x2ad24cfaa180 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x17ff770_0 .net/2s *"_s50", 1 0, L_0x2ad24cfaa180;  1 drivers
+v0x17ff850_0 .net *"_s52", 1 0, L_0x18128a0;  1 drivers
+v0x17ff930_0 .net *"_s56", 5 0, L_0x1812bb0;  1 drivers
+L_0x2ad24cfaa1c8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x17ffa10_0 .net *"_s59", 0 0, L_0x2ad24cfaa1c8;  1 drivers
+L_0x2ad24cfaa210 .functor BUFT 1, C4<000010>, C4<0>, C4<0>, C4<0>;
+v0x17ffaf0_0 .net/2u *"_s60", 5 0, L_0x2ad24cfaa210;  1 drivers
+v0x17ffbd0_0 .net *"_s62", 0 0, L_0x1812cf0;  1 drivers
+v0x17ffc90_0 .net *"_s66", 0 0, L_0x1813060;  1 drivers
+L_0x2ad24cfaa258 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v0x17ffd50_0 .net/2s *"_s68", 1 0, L_0x2ad24cfaa258;  1 drivers
+L_0x2ad24cfaa2a0 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x17ffe30_0 .net/2s *"_s70", 1 0, L_0x2ad24cfaa2a0;  1 drivers
+v0x17fff10_0 .net *"_s72", 1 0, L_0x1812e30;  1 drivers
+v0x17ffff0_0 .net "a", 7 0, v0x1800b00_0;  1 drivers
+v0x18000d0_0 .net "add_ab", 7 0, L_0x1811660;  1 drivers
+v0x17ff3a0_0 .net "b", 7 0, v0x1800be0_0;  1 drivers
+v0x18003a0_0 .net "op", 4 0, v0x1800f40_0;  1 drivers
+v0x1800480_0 .net "ovf", 0 0, L_0x1812ed0;  alias, 1 drivers
+v0x1800540_0 .net "ovf_add", 0 0, L_0x18120d0;  1 drivers
+v0x1800600_0 .net "ovf_sub", 0 0, L_0x1812a30;  1 drivers
+v0x18006c0_0 .var "r", 7 0;
+v0x18007a0_0 .net "slt", 0 0, L_0x1813360;  1 drivers
+v0x1800860_0 .net "sub_ab", 7 0, L_0x1811810;  1 drivers
+v0x1800940_0 .net "zero", 0 0, L_0x18114d0;  alias, 1 drivers
+E_0x17a54d0/0 .event edge, v0x18003a0_0, v0x17ffff0_0, v0x17ff3a0_0, v0x18000d0_0;
+E_0x17a54d0/1 .event edge, v0x1800860_0, v0x18007a0_0;
+E_0x17a54d0 .event/or E_0x17a54d0/0, E_0x17a54d0/1;
+L_0x18013a0 .concat [ 8 1 0 0], v0x18006c0_0, L_0x2ad24cfaa018;
+L_0x18114d0 .cmp/eq 9, L_0x18013a0, L_0x2ad24cfaa060;
+L_0x1811660 .arith/sum 8, v0x1800b00_0, v0x1800be0_0;
+L_0x1811810 .arith/sub 8, v0x1800b00_0, v0x1800be0_0;
+L_0x18118b0 .part v0x1800b00_0, 7, 1;
+L_0x18119e0 .part v0x1800be0_0, 7, 1;
+L_0x1811b10 .part L_0x1811660, 7, 1;
+L_0x1811c00 .part v0x1800b00_0, 7, 1;
+L_0x1811f10 .functor MUXZ 2, L_0x2ad24cfaa0f0, L_0x2ad24cfaa0a8, L_0x1811e00, C4<>;
+L_0x18120d0 .part L_0x1811f10, 0, 1;
+L_0x1812220 .part v0x1800b00_0, 7, 1;
+L_0x18122c0 .part v0x1800be0_0, 7, 1;
+L_0x1812490 .part L_0x1811810, 7, 1;
+L_0x1812580 .part v0x1800b00_0, 7, 1;
+L_0x18128a0 .functor MUXZ 2, L_0x2ad24cfaa180, L_0x2ad24cfaa138, L_0x1812740, C4<>;
+L_0x1812a30 .part L_0x18128a0, 0, 1;
+L_0x1812bb0 .concat [ 5 1 0 0], v0x1800f40_0, L_0x2ad24cfaa1c8;
+L_0x1812cf0 .cmp/eq 6, L_0x1812bb0, L_0x2ad24cfaa210;
+L_0x1812ed0 .functor MUXZ 1, L_0x1812a30, L_0x18120d0, L_0x1812cf0, C4<>;
+L_0x1813060 .cmp/gt 8, v0x1800be0_0, v0x1800b00_0;
+L_0x1812e30 .functor MUXZ 2, L_0x2ad24cfaa2a0, L_0x2ad24cfaa258, L_0x1813060, C4<>;
+L_0x1813360 .part L_0x1812e30, 0, 1;
+    .scope S_0x17be020;
+T_0 ;
+    %wait E_0x17a54d0;
+    %load/v 8, v0x18003a0_0, 5;
+    %cmpi/u 8, 0, 5;
+    %jmp/1 T_0.0, 6;
+    %cmpi/u 8, 1, 5;
+    %jmp/1 T_0.1, 6;
+    %cmpi/u 8, 2, 5;
+    %jmp/1 T_0.2, 6;
+    %cmpi/u 8, 6, 5;
+    %jmp/1 T_0.3, 6;
+    %cmpi/u 8, 7, 5;
+    %jmp/1 T_0.4, 6;
+    %cmpi/u 8, 8, 5;
+    %jmp/1 T_0.5, 6;
+    %cmpi/u 8, 12, 5;
+    %jmp/1 T_0.6, 6;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x18006c0_0, 0, 0;
+    %jmp T_0.8;
+T_0.0 ;
+    %load/v 8, v0x17ffff0_0, 8;
+    %load/v 16, v0x17ff3a0_0, 8;
+    %and 8, 16, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x18006c0_0, 0, 8;
+    %jmp T_0.8;
+T_0.1 ;
+    %load/v 8, v0x17ffff0_0, 8;
+    %load/v 16, v0x17ff3a0_0, 8;
+    %or 8, 16, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x18006c0_0, 0, 8;
+    %jmp T_0.8;
+T_0.2 ;
+    %load/v 8, v0x18000d0_0, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x18006c0_0, 0, 8;
+    %jmp T_0.8;
+T_0.3 ;
+    %load/v 8, v0x1800860_0, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x18006c0_0, 0, 8;
+    %jmp T_0.8;
+T_0.4 ;
+    %load/v 8, v0x18007a0_0, 1;
+    %mov 9, 0, 7;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x18006c0_0, 0, 8;
+    %jmp T_0.8;
+T_0.5 ;
+    %load/v 8, v0x17ffff0_0, 8;
+    %ix/load 0, 4, 0;
+    %mov 4, 0, 1;
+    %shiftl/i0  8, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x18006c0_0, 0, 8;
+    %jmp T_0.8;
+T_0.6 ;
+    %load/v 8, v0x17ffff0_0, 8;
+    %load/v 16, v0x17ff3a0_0, 8;
+    %or 8, 16, 8;
+    %inv 8, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v0x18006c0_0, 0, 8;
+    %jmp T_0.8;
+T_0.8 ;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0x17b7f70;
+T_1 ;
+    %ix/load 1, 0, 0;
+    %ix/load 3, 0, 0;
+    %set/av v0x1801000, 0, 5;
+    %movi 8, 1, 5;
+    %ix/load 1, 0, 0;
+    %ix/load 3, 1, 0;
+    %set/av v0x1801000, 8, 5;
+    %movi 8, 2, 5;
+    %ix/load 1, 0, 0;
+    %ix/load 3, 2, 0;
+    %set/av v0x1801000, 8, 5;
+    %movi 8, 6, 5;
+    %ix/load 1, 0, 0;
+    %ix/load 3, 3, 0;
+    %set/av v0x1801000, 8, 5;
+    %movi 8, 7, 5;
+    %ix/load 1, 0, 0;
+    %ix/load 3, 4, 0;
+    %set/av v0x1801000, 8, 5;
+    %movi 8, 8, 5;
+    %ix/load 1, 0, 0;
+    %ix/load 3, 5, 0;
+    %set/av v0x1801000, 8, 5;
+    %movi 8, 12, 5;
+    %ix/load 1, 0, 0;
+    %ix/load 3, 6, 0;
+    %set/av v0x1801000, 8, 5;
+    %set/v v0x1800cb0_0, 0, 32;
+T_1.0 ;
+    %load/v 8, v0x1800cb0_0, 32;
+    %cmpi/s 8, 512, 32;
+    %jmp/0xz T_1.1, 5;
+    %load/v 8, v0x1800cb0_0, 8; Only need 8 of 32 bits
+; Save base=8 wid=8 in lookaside.
+    %set/v v0x1800b00_0, 8, 8;
+    %set/v v0x1800d80_0, 0, 32;
+T_1.2 ;
+    %load/v 8, v0x1800d80_0, 32;
+    %cmpi/s 8, 512, 32;
+    %jmp/0xz T_1.3, 5;
+    %load/v 8, v0x1800d80_0, 8; Only need 8 of 32 bits
+; Save base=8 wid=8 in lookaside.
+    %set/v v0x1800be0_0, 8, 8;
+    %set/v v0x1800e60_0, 0, 32;
+T_1.4 ;
+    %load/v 8, v0x1800e60_0, 32;
+    %cmpi/s 8, 7, 32;
+    %jmp/0xz T_1.5, 5;
+    %ix/getv/s 3, v0x1800e60_0;
+    %load/av 8, v0x1801000, 5;
+    %set/v v0x1800f40_0, 8, 5;
+    %delay 50, 0;
+    %load/v 8, v0x1800f40_0, 5;
+    %cmpi/u 8, 0, 5;
+    %jmp/1 T_1.6, 6;
+    %cmpi/u 8, 1, 5;
+    %jmp/1 T_1.7, 6;
+    %cmpi/u 8, 2, 5;
+    %jmp/1 T_1.8, 6;
+    %cmpi/u 8, 6, 5;
+    %jmp/1 T_1.9, 6;
+    %cmpi/u 8, 7, 5;
+    %jmp/1 T_1.10, 6;
+    %cmpi/u 8, 8, 5;
+    %jmp/1 T_1.11, 6;
+    %cmpi/u 8, 12, 5;
+    %jmp/1 T_1.12, 6;
+    %vpi_call 2 82 "$display", "alu error: operation: %h not mapped!", v0x1800f40_0 {0 0};
+    %vpi_call 2 83 "$finish" {0 0};
+    %jmp T_1.14;
+T_1.6 ;
+    %load/v 8, v0x1801170_0, 8;
+    %load/v 16, v0x1800b00_0, 8;
+    %load/v 24, v0x1800be0_0, 8;
+    %and 16, 24, 8;
+    %cmp/u 8, 16, 8;
+    %inv 4, 1;
+    %jmp/0xz  T_1.15, 4;
+    %load/v 8, v0x1800b00_0, 8;
+    %load/v 16, v0x1800be0_0, 8;
+    %and 8, 16, 8;
+    %vpi_call 2 33 "$display", "alu error: 'and' operation: %h - operands: %h %h result: %h expected: %h", v0x1800f40_0, v0x1800b00_0, v0x1800be0_0, v0x1801170_0, T<8,8,u> {0 0};
+    %vpi_call 2 34 "$finish" {0 0};
+T_1.15 ;
+    %jmp T_1.14;
+T_1.7 ;
+    %load/v 8, v0x1801170_0, 8;
+    %load/v 16, v0x1800b00_0, 8;
+    %load/v 24, v0x1800be0_0, 8;
+    %or 16, 24, 8;
+    %cmp/u 8, 16, 8;
+    %inv 4, 1;
+    %jmp/0xz  T_1.17, 4;
+    %load/v 8, v0x1800b00_0, 8;
+    %load/v 16, v0x1800be0_0, 8;
+    %or 8, 16, 8;
+    %vpi_call 2 40 "$display", "alu error: 'or' operation: %h - operands: %h %h result: %h expected: %h", v0x1800f40_0, v0x1800b00_0, v0x1800be0_0, v0x1801170_0, T<8,8,u> {0 0};
+    %vpi_call 2 41 "$finish" {0 0};
+T_1.17 ;
+    %jmp T_1.14;
+T_1.8 ;
+    %load/v 8, v0x1801170_0, 8;
+    %load/v 16, v0x1800b00_0, 8;
+    %load/v 24, v0x1800be0_0, 8;
+    %add 16, 24, 8;
+    %cmp/u 8, 16, 8;
+    %inv 4, 1;
+    %jmp/0xz  T_1.19, 4;
+    %load/v 8, v0x1800b00_0, 8;
+    %load/v 16, v0x1800be0_0, 8;
+    %add 8, 16, 8;
+    %vpi_call 2 47 "$display", "alu error: 'add' operation: %h - operands: %h %h result: %h expected: %h", v0x1800f40_0, v0x1800b00_0, v0x1800be0_0, v0x1801170_0, T<8,8,u> {0 0};
+    %vpi_call 2 48 "$finish" {0 0};
+T_1.19 ;
+    %jmp T_1.14;
+T_1.9 ;
+    %load/v 8, v0x1801170_0, 8;
+    %load/v 16, v0x1800b00_0, 8;
+    %load/v 24, v0x1800be0_0, 8;
+    %sub 16, 24, 8;
+    %cmp/u 8, 16, 8;
+    %inv 4, 1;
+    %jmp/0xz  T_1.21, 4;
+    %load/v 8, v0x1800b00_0, 8;
+    %load/v 16, v0x1800be0_0, 8;
+    %sub 8, 16, 8;
+    %vpi_call 2 54 "$display", "alu error: 'sub' operation: %h - operands: %h %h result: %h expected?: %h", v0x1800f40_0, v0x1800b00_0, v0x1800be0_0, v0x1801170_0, T<8,8,u> {0 0};
+    %vpi_call 2 55 "$finish" {0 0};
+T_1.21 ;
+    %jmp T_1.14;
+T_1.10 ;
+    %load/v 8, v0x1801170_0, 2; Select 2 out of 8 bits
+    %pad 10, 0, 1;
+    %load/v 11, v0x1800b00_0, 8;
+    %load/v 19, v0x1800be0_0, 8;
+    %cmp/u 11, 19, 8;
+    %mov 11, 5, 1;
+    %jmp/0  T_1.23, 11;
+    %movi 12, 1, 3;
+    %jmp/1  T_1.25, 11;
+T_1.23 ; End of true expr.
+    %jmp/0  T_1.24, 11;
+ ; End of false expr.
+    %blend  12, 0, 3; Condition unknown.
+    %jmp  T_1.25;
+T_1.24 ;
+    %mov 12, 0, 3; Return false value
+T_1.25 ;
+    %cmp/u 8, 12, 3;
+    %inv 4, 1;
+    %jmp/0xz  T_1.26, 4;
+    %load/v 8, v0x1800b00_0, 8;
+    %load/v 16, v0x1800be0_0, 8;
+    %cmp/u 8, 16, 8;
+    %mov 8, 5, 1;
+    %jmp/0  T_1.28, 8;
+    %movi 9, 1, 2;
+    %jmp/1  T_1.30, 8;
+T_1.28 ; End of true expr.
+    %jmp/0  T_1.29, 8;
+ ; End of false expr.
+    %blend  9, 0, 2; Condition unknown.
+    %jmp  T_1.30;
+T_1.29 ;
+    %mov 9, 0, 2; Return false value
+T_1.30 ;
+    %vpi_call 2 62 "$display", "alu error: 'slt' operation: %h - operands: %h %h result: %h expected: %h", v0x1800f40_0, v0x1800b00_0, v0x1800be0_0, &PV<v0x1801170_0, 0, 2>, T<9,2,s> {0 0};
+    %vpi_call 2 63 "$finish" {0 0};
+T_1.26 ;
+    %jmp T_1.14;
+T_1.11 ;
+    %load/v 8, v0x1801170_0, 8;
+    %load/v 16, v0x1800b00_0, 8;
+    %ix/load 0, 4, 0;
+    %mov 4, 0, 1;
+    %shiftl/i0  16, 8;
+    %cmp/u 8, 16, 8;
+    %inv 4, 1;
+    %jmp/0xz  T_1.31, 4;
+    %load/v 8, v0x1800b00_0, 8;
+    %ix/load 0, 4, 0;
+    %mov 4, 0, 1;
+    %shiftl/i0  8, 8;
+    %vpi_call 2 69 "$display", "alu error: 'lui' operation: %h - operands: %h %h result: %h expected: %h", v0x1800f40_0, v0x1800b00_0, v0x1800be0_0, v0x1801170_0, T<8,8,u> {0 0};
+    %vpi_call 2 70 "$finish" {0 0};
+T_1.31 ;
+    %jmp T_1.14;
+T_1.12 ;
+    %load/v 8, v0x1801170_0, 8;
+    %load/v 16, v0x1800b00_0, 8;
+    %load/v 24, v0x1800be0_0, 8;
+    %or 16, 24, 8;
+    %inv 16, 8;
+    %cmp/u 8, 16, 8;
+    %inv 4, 1;
+    %jmp/0xz  T_1.33, 4;
+    %load/v 8, v0x1800b00_0, 8;
+    %load/v 16, v0x1800be0_0, 8;
+    %or 8, 16, 8;
+    %inv 8, 8;
+    %vpi_call 2 76 "$display", "alu error: 'nor' operation: %h - operands: %h %h result: %h expected: %h", v0x1800f40_0, v0x1800b00_0, v0x1800be0_0, v0x1801170_0, T<8,8,u> {0 0};
+    %vpi_call 2 77 "$finish" {0 0};
+T_1.33 ;
+    %jmp T_1.14;
+T_1.14 ;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v0x1800e60_0, 32;
+    %set/v v0x1800e60_0, 8, 32;
+    %jmp T_1.4;
+T_1.5 ;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v0x1800d80_0, 32;
+    %set/v v0x1800d80_0, 8, 32;
+    %jmp T_1.2;
+T_1.3 ;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v0x1800cb0_0, 32;
+    %set/v v0x1800cb0_0, 8, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %vpi_call 2 90 "$display", "alu ok: all operations performed with success!" {0 0};
+    %vpi_call 2 91 "$finish" {0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x17b7f70;
+T_2 ;
+    %vpi_call 2 95 "$dumpfile", "alu_waves.vcd" {0 0};
+    %vpi_call 2 96 "$dumpvars" {0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "alu_tb.v";
+    "alu.v";
